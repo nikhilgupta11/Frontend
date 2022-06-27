@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+        Number 1: <input type="text" id="num1">
+        Number 2: <input type="text"  id="num2">
+        Number 3: <input type="text"  id="num3">
+        <button id="btn" onclick="getnum()">Submit</button>
+    </form>
+
+    <script>
+        
+        function getnum(){
+            let a = document.getElementById("num1").value;
+            let b = document.getElementById("num2").value;
+            let c = document.getElementById("num3").value;
+
+            if(a<b&&a<c){
+                if (b<c){
+                    window.alert(a+","+b+","+c);
+                }
+                else{  
+                    window.alert(a+","+c+","+b)
+                }
+            }
+            else if (b<a&&b<c){
+                if(b<a){
+                alert(b,",",a,",",c);
+                }
+                else{
+                    window.alert(b,",",c,",",a)
+                }
+            }
+            else if(c<a && c<b){
+                if(c<a){
+                    window.alert(c+","+b+","+a)
+                }
+                else{
+                    window.alert(c+","+b,","+a)}
+            }
+        }
+    </script>
+</body>
+</html>

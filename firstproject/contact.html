@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    a:hover {
+        background-color: blueviolet;
+        
+    }
+    input:focus{
+        background-color: cadetblue;
+    }
+</style>
+<body style="background-color: lightgray;">
+    <nav style="background-color: darkgray; height: 50px;">
+        <a href="second.html" style="margin-left: 780px;padding: 15px;">HOME</a>
+        <a href="About.html" style="padding: 15px;" >ABOUT</a>
+        <a href="reels.html" style="padding: 15px;">REELS</a>
+        <a href="contact.html" style="padding: 15px;">CONTACT</a>
+        <a href="first.html" style="padding: 15px;">LOG OUT</a>
+    </nav>
+    <div style="background-color: yellowgreen;position: absolute;left: 35%;right: 35%;top: 25%;height: 300px;width: 1000; padding: 20px;">
+        <form>
+            FirstName:  <input type="text" required style="margin-top: 20px;"> 
+            LastName:   <input type="text" required style="margin-top: 20px;">
+            Contact no.:<input type="text" required style="margin-top: 20px;">
+            E-Mail id.: <input type="text" required style="margin-top: 20px;">
+            Quary:      <input type="text" required style="margin-top: 20px;">
+            <button style="margin-left: 70px; margin-top: 50px;">
+                  SUBMIT
+            </button>
+            <button onclick="window.location.href='contact.html';" style="margin-left: 80px;">
+                  RESET
+            </button> 
+        </form>
+    </div>
+    <div>
+        <footer style="background-color: dimgrey; height: 30px; text-align: center; padding: 10px; font-size: 15px; margin-top: 550px;">
+            @ copyright reserved since 1999
+        </footer>
+    </div>
+</body>
+</html>

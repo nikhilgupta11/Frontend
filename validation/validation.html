@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Form</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse">
+            <a class="navbar-brand mx-auto text-white">VALIDATION PAGE</a>
+          </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid" style="margin-top: 10px;">
+        <div class="text-left" style="margin-top: 10px; background-color: blueviolet;">
+            <h3>Personal Details:-</h3>
+        </div>
+
+        <div class="data">
+            <form action="#" onsubmit="return validation()" class="bg-light">
+                <div class="pdetail">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="">Application no.:</label>
+                            <input type="text" name="anumber" class="form-control" id="anumber" autocomplete="off">
+                            <span id="anum" class="text-danger font-weight-bold"></span>
+                        </div>
+                    
+                        <div class="col-sm-4">
+                            <label for="">Student Name:</label>
+                            <input type="text" name="name" class="form-control" id="name" autocomplete="off">
+                            <span id="sname" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label for="">Email:</label>
+                            <input type="text" name="email" class="form-control" id="email" autocomplete="off">
+                            <span id="mail" class="text-danger font-weight-bold"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="">Mobile Number</label>
+                            <input type="text" name="number" class="form-control" id="number" autocomplete="off">
+                            <span id="mobnumber" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label for="">Date of Birth:</label>
+                            <input type="date" name="dob" class="form-control" id="dob" autocomplete="off">
+                            <span id="sdob" class="text-danger font-weight-bold"></span>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <label for="">Aadhar No.:</label>
+                            <input type="text" name="aadhar" class="form-control" id="aadhar" autocomplete="off">
+                            <span id="aadharno" class="text-danger font-weight-bold"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="">Father's Name:</label>
+                            <input type="text" name="fname" class="form-control" id="fname" autocomplete="off">
+                            <span id="fathername" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label for="">Mother's Name:</label>
+                            <input type="text" name="mname" class="form-control" id="mname" autocomplete="off">
+                            <span id="mothername" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label for="">Catagory:</label>
+                            <select type="text" name="cat" class="form-control" id="cat">
+                            <option value="select">--select--</option>
+                            <option value="general">General</option>
+                            <option value="ews">EWS</option>
+                            <option value="obc">OBC</option>
+                            <option value="sc">SC</option>
+                            <option value="st">ST</option>
+                            </select>
+                            <span id="catagory" class="text-danger font-weight-bold"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="">Religion:</label>
+                            <select type="text" name="rel" class="form-control" id="rel">
+                            <option value="select">--select--</option>
+                            <option value="hindu">Hindu</option>
+                            <option value="muslims">Muslims</option>
+                            <option value="sikh">Sikh</option>
+                            <option value="others">Others</option>
+                            </select>
+                            <span id="religion" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label for="">Nationality:</label>
+                            <input type="text" name="nation" class="form-control" id="nation" autocomplete="off">
+                            <span id="nationality" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label for="">Gender:</label>
+                            <table class="gender" style="width: 60%;">
+                                <tr>
+                                    <td>
+                                        <input type="radio" name="gender_m" id="gender_m" value="male">
+                                        <label for :gender_m> Male</label>
+                                    </td>
+
+                                    <td>
+                                        <input type="radio" name="gender_f" id="gender_f" value="female">
+                                        <label for :gender_f> Female</label>
+                                    </td>
+
+                                    <td>
+                                        <input type="radio" name="other" id="other" value="other">
+                                        <label for :other> Other</label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="adetail">
+                    <div class="text-left" style="margin-top: 10px; background-color: blueviolet;">
+                        <h3>Address Details:-</h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="">Address:</label>
+                            <input type="address" name="add" class="form-control" id="add" autocomplete="off">
+                            <span id="address" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="">State:</label>
+                            <select type="text" name="sta" class="form-control" id="sta">
+                              <option value="select">--select--</option>
+                              <option value="raj">Rajasthan</option>
+                              <option value="delhi">Delhi</option>
+                              <option value="others">Others</option>
+                            </select>
+                            <span id="state" class="text-danger font-weight-bold"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="">City:</label>
+                            <input type="text" name="city" class="form-control" id="city" autocomplete="off">
+                            <span id="scity" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="">Pincode:</label>
+                            <input type="pincode" name="pin" class="form-control" id="pin" autocomplete="off">
+                            <span id="pincode" class="text-danger font-weight-bold"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cdetail">
+                    <div class="text-left" style="margin-top: 10px; background-color: blueviolet;">
+                        <h3>Courses Details:-</h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="">Discipline:</label>
+                            <select type="text" name="dplin" class="form-control" id="dplin">
+                              <option value="select">--select--</option>
+                              <option value="ug">UG</option>
+                              <option value="pg">PG</option>
+                              <option value="others">Others</option>
+                            </select>
+                            <span id="discipline" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label for="">Programme:</label>
+                            <input type="text" name="pro" class="form-control" id="pro" autocomplete="off">
+                            <span id="program" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label for="">specilization:</label>
+                            <input type="text" name="speci" class="form-control" id="speci" autocomplete="off">
+                            <span id="specilization" class="text-danger font-weight-bold"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="edudetail">
+                    <div class="text-left" style="margin-top: 10px; background-color: blueviolet;">
+                        <h3>Education Details:-</h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <br>
+                            10
+                            <sup>th</sup>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label for="">status:</label>
+                            <input type="text" name="sta1" class="form-control" id="sta1" autocomplete="off">
+                            <span id="status1" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label for="">Board:</label>
+                            <input type="text" name="bord1" class="form-control" id="bord1" autocomplete="off">
+                            <span id="board1" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label for="">Percentage:</label>
+                            <input type="text" name="percen1" class="form-control" id="percen1" autocomplete="off">
+                            <span id="percentage1" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label for="">Year:</label>
+                            <input type="text" name="yer1" class="form-control" id="yer1" autocomplete="off">
+                            <span id="year1" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="">subjects:</label>
+                            <input type="text" name="subj1" class="form-control" id="subj1" autocomplete="off">
+                            <span id="subject1" class="text-danger font-weight-bold"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <br>
+                            12
+                            <sup>th</sup>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label for="">status:</label>
+                            <input type="text" name="sta2" class="form-control" id="sta2" autocomplete="off">
+                            <span id="status2" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label for="">Board:</label>
+                            <input type="text" name="bord2" class="form-control" id="bord2" autocomplete="off">
+                            <span id="board2" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label for="">Percentage:</label>
+                            <input type="text" name="percen2" class="form-control" id="percen2" autocomplete="off">
+                            <span id="percentage2" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label for="">Year:</label>
+                            <input type="text" name="yer2" class="form-control" id="yer2" autocomplete="off">
+                            <span id="year2" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="">subjects:</label>
+                            <input type="text" name="subj2" class="form-control" id="subj2" autocomplete="off">
+                            <span id="subject2" class="text-danger font-weight-bold"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <br>
+                            PG
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label for="">status:</label>
+                            <input type="text" name="sta3" class="form-control" id="sta3" autocomplete="off">
+                            <span id="status3" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label for="">University:</label>
+                            <input type="text" name="bord3" class="form-control" id="bord3" autocomplete="off">
+                            <span id="board3" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label for="">Percentage:</label>
+                            <input type="text" name="percen3" class="form-control" id="percen3" autocomplete="off">
+                            <span id="percentage3" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <label for="">Year:</label>
+                            <input type="text" name="yer3" class="form-control" id="yer3" autocomplete="off">
+                            <span id="year3" class="text-danger font-weight-bold"></span>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <label for="">subjects:</label>
+                            <input type="text" name="subj3" class="form-control" id="subj3" autocomplete="off">
+                            <span id="subject3" class="text-danger font-weight-bold"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="submit" name="submit" value="Submit" class="btn btn-success">
+
+            </form>  
+        </div>
+    </div>
+
+    <!-- js start-->
+    <script>
+        function validation()
+        {
+            var ano = document.getElementById("anumber").value;
+            // var re1= /^([a-zA-Z0-9])$/ ;
+            // if (re1.test(ano))
+            // {
+            //     return true;
+            // }
+            // else
+            // {
+            //     ano.style.border="red solid 3px";
+            //     return false;
+            // }
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var number = document.getElementById("number").value;
+            var dob = document.getElementById("dob").value;
+            var aadhar = document.getElementById("aadhar").value;
+            var fname = document.getElementById("fname").value;
+            var mname = document.getElementById("mname").value;
+            var cat = document.getElementById("cat").value;
+            var rel = document.getElementById("rel").value;
+            var nation = document.getElementById("nation").value;
+
+
+
+            var add = document.getElementById("add").value;
+            var sta = document.getElementById("sta").value;
+            var city = document.getElementById("city").value;
+            var pin = document.getElementById("pin").value;
+
+
+
+            var dplin = document.getElementById("dplin").value;
+            var pro = document.getElementById("pro").value;
+            var speci = document.getElementById("speci").value;
+
+
+
+            var sta1 = document.getElementById("sta1").value;
+            var bord1 = document.getElementById("bord1").value;
+            var percen1 = document.getElementById("percen1").value;
+            var yer1 = document.getElementById("yer1").value;
+            var subj1 = document.getElementById("subj1").value;
+
+            var sta2 = document.getElementById("sta2").value;
+            var bord2 = document.getElementById("bord2").value;
+            var percen2 = document.getElementById("percen2").value;
+            var yer2 = document.getElementById("yer2").value;
+            var subj2 = document.getElementById("subj2").value;
+
+            var sta3 = document.getElementById("sta3").value;
+            var bord3= document.getElementById("bord3").value;
+            var percen3 = document.getElementById("percen3").value;
+            var yer3 = document.getElementById("yer3").value;
+            var subj3 = document.getElementById("subj3").value;
+
+
+            if(ano=="")
+            {
+                document.getElementById('anum').innerHTML="** Please fill the Application Number";
+                return false;
+            }
+
+            if((ano.length < 8) || (ano.length>20))
+            {
+                document.getElementById('anum').innerHTML="** Application number should be in range of 8 to 20";
+                return false;
+            }
+
+            if(isNaN(ano))
+            {
+                document.getElementById('anum').innerHTML="** Characters are Not Allowed";
+                return false;
+            }
+
+
+            if(name=="")
+            {
+                document.getElementById('sname').innerHTML="** Please fill the Name";
+                return false;
+            }
+
+            if((name.length < 3) || (name.length>20))
+            {
+                document.getElementById('sname').innerHTML="** length should be in range of 3 to 20";
+                return false;
+            }
+            if(!isNaN(name))
+            {
+                document.getElementById('sname').innerHTML="** Numbers are Not Allowed";
+                return false;
+            }
+
+
+            if(email=="")
+            {
+                document.getElementById('mail').innerHTML="** Please fill Email ID";
+                return false;
+            }
+            if(email.indexOf('@')<=0)
+            {
+                document.getElementById('mail').innerHTML="** @ position is not correct";
+                return false;
+            }
+            // if((email.charAt(email.length-4)!='.') && (email.charAt(email.length-3)!='.'))
+            // {
+            //     document.getElementById('mail').innerHTML="** . is at invalid position";
+            //     return false;
+            // }
+
+
+            if(number=="")
+            {
+                document.getElementById('mobnumber').innerHTML="** Please fill the Mobile Number";
+                return false;
+            }
+            if(isNaN(number))
+            {
+                document.getElementById('mobnumber').innerHTML="** Characters are not allowed";
+                return false;
+            }
+            if(number.length!=10)
+            {
+                document.getElementById('mobnumber').innerHTML="** Mobile number must be 10 digit";
+                return false;
+            }
+
+
+            if(dob=='')
+            {
+                document.getElementById('sdob').innerHTML="** Date of Birth can't be Empty";
+                return false;
+            }
+
+
+            if(aadhar=='')
+            {
+                document.getElementById('aadharno').innerHTML="** Aadhar field can't be empty";
+                return false;
+            }
+            if(aadhar.length!=12)
+            {
+                document.getElementById('aadharno').innerHTML="** Aadhar number should be 12 digit";
+                return false;
+            }
+            if(isNaN(aadhar))
+            {
+                document.getElementById('aadharno').innerHTML="**Characters are not Allowed";
+                return false;
+            }
+
+
+            if(fname=='')
+            {
+                document.getElementById('fathername').innerHTML="**This field can't be empty";
+                return false;
+            }
+            if(isNaN(fname))
+            {
+                document.getElementById('fathername').innerHTML="** Numbers Not Allowed";
+                return false;
+            }
+
+
+            if(mname=='')
+            {
+                document.getElementById('mothername').innerHTML="**This field can't be empty";
+                return false;
+            }
+            if(!isNaN(mname))
+            {
+                document.getElementById('mothername').innerHTML="** Numbers Not Allowed";
+                return false;
+            }
+
+
+            if(cat=='')
+            {
+                document.getElementById('catagory').innerHTML="**Please select a catagory";
+                return false;
+            }
+
+            if(rel=='')
+            {
+                document.getElementById('religion').innerHTML="**This field can't be empty";
+                return false;
+            }
+
+            if(nation=='')
+            {
+                document.getElementById('nationality').innerHTML="**This field can't be empty";
+                return false;
+            }
+
+            if(add=="")
+            {
+                document.getElementById('address').innerHTML="**This field can't be empty";
+                return false;
+            }
+
+            if(sta=="")
+            {
+                document.getElementById('state').innerHTML="**This field can't be empty";
+                return false;
+            }
+
+            if(city=="")
+            {
+                document.getElementById('scity').innerHTML="**This field can't be empty";
+                return false;
+            }
+
+            if(pin=="")
+            {
+                document.getElementById('pincode').innerHTML="**This field can't be empty";
+                return false;
+            }
+            if(isNaN(pin))
+            {
+                document.getElementById('pincode').innerHTML="**Characters are not Allowed";
+                return false;
+            }
+
+
+            if(dplin=="")
+            {
+                document.getElementById('discipline').innerHTML="**This field can't be empty";
+                return false;
+            }
+
+            if(pro=="")
+            {
+                document.getElementById('program').innerHTML="**This field can't be empty";
+                return false;
+            }
+
+            if(speci=="")
+            {
+                document.getElementById('specilization').innerHTML="**This field can't be empty";
+                return false;
+            }
+
+            if(sta1=="")
+            {
+                document.getElementById('status1').innerHTML="**This field can't be empty";
+                return false;
+            }
+
+            if(bord1=="")
+            {
+                document.getElementById('board1').innerHTML="**This field can't be empty";
+                return false;
+            }
+            if(!isNaN(bord1))
+            {
+                document.getElementById('board1').innerHTML="**Integer value no allowed";
+                return false;
+            }
+
+            if(percen1=="")
+            {
+                document.getElementById('percentage1').innerHTML="**This field can't be empty";
+                return false;
+            }
+            if(isNaN(percen1))
+            {
+                document.getElementById('percentage1').innerHTML="**character value no allowed";
+                return false;
+            }
+
+            if(yer1=="")
+            {
+                document.getElementById('year1').innerHTML="**This field can't be empty";
+                return false;
+            }
+            if(isNaN(yer1))
+            {
+                document.getElementById('year1').innerHTML="**character value no allowed";
+                return false;
+            }
+
+            if(subj1=="")
+            {
+                document.getElementById('subject1').innerHTML="**This field can't be empty";
+                return false;
+            }
+            if(!isNaN(subj1))
+            {
+                document.getElementById('subject1').innerHTML="**Integer value no allowed";
+                return false;
+            }
+
+            if(sta2=="")
+            {
+                document.getElementById('status2').innerHTML="**This field can't be empty";
+                return false;
+            }
+
+            if(bord2=="")
+            {
+                document.getElementById('board2').innerHTML="**This field can't be empty";
+                return false;
+            }
+            if(!isNaN(bord2))
+            {
+                document.getElementById('board2').innerHTML="**Integer value no allowed";
+                return false;
+            }
+
+            if(percen2=="")
+            {
+                document.getElementById('percentage2').innerHTML="**This field can't be empty";
+                return false;
+            }
+            if(isNaN(percen2))
+            {
+                document.getElementById('percentage2').innerHTML="**character value no allowed";
+                return false;
+            }
+
+            if(yer2=="")
+            {
+                document.getElementById('year2').innerHTML="**This field can't be empty";
+                return false;
+            }
+            if(isNaN(yer2))
+            {
+                document.getElementById('year2').innerHTML="**character value no allowed";
+                return false;
+            }
+
+            if(subj2=="")
+            {
+                document.getElementById('subject2').innerHTML="**This field can't be empty";
+                return false;
+            }
+            if(!isNaN(subj2))
+            {
+                document.getElementById('subject2').innerHTML="**Integer value no allowed";
+                return false;
+            }
+
+            if(sta3=="")
+            {
+                document.getElementById('status3').innerHTML="**This field can't be empty";
+                return false;
+            }
+
+            if(bord3=="")
+            {
+                document.getElementById('board3').innerHTML="**This field can't be empty";
+                return false;
+            }
+            if(!isNaN(bord3))
+            {
+                document.getElementById('board3').innerHTML="**Integer value no allowed";
+                return false;
+            }
+
+            if(percen3=="")
+            {
+                document.getElementById('percentage3').innerHTML="**This field can't be empty";
+                return false;
+            }
+            if(isNaN(percen3))
+            {
+                document.getElementById('percentage3').innerHTML="**character value no allowed";
+                return false;
+            }
+
+            if(yer3=="")
+            {
+                document.getElementById('year3').innerHTML="**This field can't be empty";
+                return false;
+            }
+            if(isNaN(yer3))
+            {
+                document.getElementById('year3').innerHTML="**character value no allowed";
+                return false;
+            }
+
+            if(subj3=="")
+            {
+                document.getElementById('subject3').innerHTML="**This field can't be empty";
+                return false;
+            }
+            if(!isNaN(subj3))
+            {
+                document.getElementById('subject3').innerHTML="**Integer value no allowed";
+                return false;
+            }
+        }
+    </script>
+    <!-- js end -->
+</body>
+</html>

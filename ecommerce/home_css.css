@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand{
+    margin-left: 30px;
+}
+.btn1{
+    height: 45px;
+    width: 35%;
+    outline: none;
+    background-color: black;
+    color: white;
+    font-weight:  700;
+    border-radius: 35px;
+}
+.col-3 img:hover{
+    height: 300px;
+    margin-top: 100px;
+    box-shadow: blueviolet;
+    transform: translateX(1%);
+    transition: 1s;
+
+}
+.col-1 img:hover{
+    height: 80px;
+    box-shadow: blueviolet;
+    transform: translateX(1%);
+    transition: 2s;
+
+}
+.col-12 img:hover{
+    height: 50px;
+    box-shadow: blueviolet;
+    transform: translateX(1%);
+    transition: 2s;
+
+}
+.col-13 img:hover{
+    height: 500px;
+    box-shadow: blueviolet;
+    transform: translateX(1%);
+    transition: 2s;
+
+}
+.col-4 img:hover{
+    height: 450px;
+    box-shadow: blueviolet;
+    transform: translateX(1%);
+    transition: 2s;
+
+}
+.high{
+    width: 500px;
+    height: 500px;
+}
+.col-3 img:hover{
+    height: 300px;
+    margin-top: 100px;
+    box-shadow: blueviolet;
+    transform: translateX(1%);
+    transition: 1s;
+
+}
